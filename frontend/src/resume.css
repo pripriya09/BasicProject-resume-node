@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+.dividedPage {
+    display: flex;
+    justify-content:space-evenly;
+    height: 100vh;
+   
+  }
+ h1{
+    text-align: center;
+    
+    
+  }
+  
+  .Registerpage {
+    width: 50%;
+    background-color:#D6D1CE;
+    padding: 30px 20px;
+   
+   
+  }
+  
+  .SignUpPage {
+    width: 50%;
+    background-color:#66b1ad;
+   
+   
+  }
+  #wrapper{
+    margin:50px auto;
+  }
+  #wrapper h2{
+    margin-bottom: 40px;
+  text-align: center;
+  }
+  
+  .formregister {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .formregister label {
+   
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+
+  }
+  
+  .formregister input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #3f7e54;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+   button:hover {
+    background-color: #344b64;
+  }
+  
