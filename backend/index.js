@@ -59,6 +59,14 @@ app.post("/register", async (req, res) => {
   console.log(usersave);
 });
 
+// app.post("/show",async (req,res)=>{
+//   // const { name,username, email, password } = req.body;
+//   // const showdata =await UserModel.findById()
+//   const  showdata = await UserModel.find()
+//     res.json(showdata)
+//   console.log(showdata)
+// })
+
 app.post("/login", async (req, res) => {
   console.log(req.body);
   const { username, password } = req.body;

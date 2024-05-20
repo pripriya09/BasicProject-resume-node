@@ -1,9 +1,13 @@
 import React from 'react'
 
 function Blog() {
+
+  // axios.post("http://localhost:")
+
+
   return (
-    <div>
-      
+    <div className="blog">
+      hello
     </div>
   )
 }
