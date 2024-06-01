@@ -21,6 +21,7 @@ function Registerpage() {
     .then((res) => {
       if (res.status === 200 && res.data === true) {
         setIsUpdateRegister("Registration successful. Now open the login page.");
+        console.log(res.data)
       }
     })
     .catch((err) => {

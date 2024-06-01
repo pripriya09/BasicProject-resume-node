@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isUpdateRegister, setIsUpdateRegister] = useState(null);
+  const [isUpdateRegister, setIsUpdateRegister] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();

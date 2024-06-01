@@ -6,7 +6,8 @@
 .dividedPage {
     display: flex;
     justify-content:space-evenly;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
    
   }
  h1{
@@ -109,3 +110,5 @@
     background-color: #3d5f48;
     height: 100vh;
   }
+
+  

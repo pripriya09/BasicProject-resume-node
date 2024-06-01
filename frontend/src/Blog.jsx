@@ -1,13 +1,21 @@
 import React from 'react'
+// import Outlet from "react-router-dom"
+import { NavLink } from 'react-router-dom'
 
 function Blog() {
 
-  // axios.post("http://localhost:")
+// function handleClick(){
+//   window.location.href = "/myprofile"
+// }
+
 
 
   return (
     <div className="blog">
-      hello
+      <h1>hello</h1>
+     <h2><NavLink to="/myprofile">next</NavLink></h2>
+     {/* <button onClick={handleClick} >next</button> */}
+     {/* <Outlet/> */}
     </div>
   )
 }

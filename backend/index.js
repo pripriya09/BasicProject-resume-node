@@ -48,31 +48,29 @@ app.use(express.json());
 
 app.post("/register", async (req, res) => {
   console.log(req.body);
-
-  const { name,username, email, password } = req.body;
+  const { name, username, email, password } = req.body;
   const salt = await bcrypt.genSalt(10);
   const hashedpass = await bcrypt.hash(password, salt);
 
-  const usersave = new UserModel({ name:name,username:username, email:email, password: hashedpass });
-  const success = await usersave.save();
-  if (success) res.send(true);
-  console.log(usersave);
-});
+  const newUser = new UserModel({ name:name, username:username, email:email, password: hashedpass });
+  // try {
+    const savedUser = await newUser.save();
+    console.log(savedUser)
+    if (savedUser) res.send(true);
+  else res.send(false);
 
-// app.post("/show",async (req,res)=>{
-//   // const { name,username, email, password } = req.body;
-//   // const showdata =await UserModel.findById()
-//   const  showdata = await UserModel.find()
-//     res.json(showdata)
-//   console.log(showdata)
-// })
+})
+
 
 app.post("/login", async (req, res) => {
   console.log(req.body);
   const { username, password } = req.body;
-  const logindata = await UserModel.find({ username });
+  const logindata = await UserModel.findOne({username});
 
-  const isUserValid = await bcrypt.compare(password, logindata[0].password);
+  const isUserValid = await bcrypt.compare(password, logindata.password);
   if (isUserValid) res.send(true);
   else res.send(false);
+  console.log(isUserValid)
 });
+
+
